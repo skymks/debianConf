@@ -1,8 +1,11 @@
 #/bin/bash   
-
+#
 confPath=/debianConf
+
+#
+ln -sf -T $confPath/sources.list /etc/apt/sources.list
 #  
-ln -sf -T $confPath/profile.d/bashInit.sh /etc/profile.d/bashInit.sh
+ln -sf -T $confPath/.bashrc ~/.bashrc
 
 #
 ln -sf -T $confPath/vimConf/.vimrc ~/.vimrc
