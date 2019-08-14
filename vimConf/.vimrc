@@ -1,5 +1,10 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" encode
+scriptencoding utf-8
+set encoding=utf8
+set fileencodings=utf-8
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -20,6 +25,13 @@ let g:lightline = {
       \   'right': [ [] ]
       \ },
       \ }
+" NERDTree配置
+let NERDTreeMinimalUI=1
+let g:NERDTreeHighlightCursorline=0
+let g:NERDTreeShowHidden=1
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '~'
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -58,7 +70,6 @@ set nofoldenable
 set scrolloff=7
 
 " Avoid garbled characters in Chinese language windows OS
-set fileencodings=ucs-bom,utf-8
 
 " Turn on the Wild menu
 " 自动补全命令使用菜单显示
@@ -129,9 +140,6 @@ catch
 endtry
 set background=dark
 set t_Co=256
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
