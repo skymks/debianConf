@@ -575,6 +575,8 @@ endfun
 " s:WinEnterHandler() {{{
 "
 fun! s:WinEnterHandler()
+  echo s:IsCurrentWindowNERDTree()
+  let &l:statusline = g:NERDTreeStatusline
   if s:IsCurrentWindowNERDTree()
     if &l:statusline != g:NERDTreeStatusline
       let &l:statusline = g:NERDTreeStatusline
@@ -615,11 +617,6 @@ endfun
 " work for newly opened tab.
 "
 fun! s:BufWinEnterHandler()
-  if s:IsCurrentWindowNERDTree()
-    if &l:statusline != g:NERDTreeStatusline
-      let &l:statusline = g:NERDTreeStatusline
-    endif
-  endif
   if s:NewTabCreated
     " Turn off the 'NewTabCreated' flag
     let s:NewTabCreated = 0
