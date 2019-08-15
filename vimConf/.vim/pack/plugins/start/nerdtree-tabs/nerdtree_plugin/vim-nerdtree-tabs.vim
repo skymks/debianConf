@@ -575,13 +575,6 @@ endfun
 " s:WinEnterHandler() {{{
 "
 fun! s:WinEnterHandler()
-  echo s:IsCurrentWindowNERDTree()
-  let &l:statusline = g:NERDTreeStatusline
-  if s:IsCurrentWindowNERDTree()
-    if &l:statusline != g:NERDTreeStatusline
-      let &l:statusline = g:NERDTreeStatusline
-    endif
-  endif
   if s:disable_handlers_for_tabdo
     return
   endif

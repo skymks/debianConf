@@ -26,7 +26,7 @@ let g:lightline = {
       \ },
       \ }
 " NERDTree配置
-let NERDTreeMinimalUI=1
+let g:NERDTreeMinimalUI=1
 let g:NERDTreeHighlightCursorline=0
 let g:NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = '+'
@@ -54,7 +54,8 @@ let mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
-
+" NERD Tabs
+map <leader>n <plug>NERDTreeMirrorToggle<CR>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
@@ -252,9 +253,8 @@ set laststatus=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
+noremap 0 ^
+noremap ^ 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
