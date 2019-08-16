@@ -24,6 +24,9 @@ let g:lightline = {
 	  \ 'tabline': {
       \   'right': [ [] ]
       \ },
+      \ 'component_function': {
+      \   'filename': 'lightlint#custom#filename',
+      \ },
       \ }
 " NERDTree配置
 let g:NERDTreeMinimalUI=1
