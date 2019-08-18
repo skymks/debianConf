@@ -6,14 +6,14 @@
 - [.bashrc](#.bashrc)
 - [.vimrc&.vim](#.vimrc&.vim)
 
-### debianInit.sh 
+## debianInit.sh 
 环境初始化脚本
 
-### sources.list
+## sources.list
 debian软件源
 
-### .bashrc
+## .bashrc
 Bash环境配置
 
-### .vimrc&.vim
+## .vimrc&.vim
 Vim的配置
