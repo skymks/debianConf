@@ -18,14 +18,35 @@ let g:netrw_dirhistmax=0
 let g:lightline = {
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ],
+      \              [ 'maxlinenum' ],
       \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
       \ },
+      \ 'inactive': {
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'maxlinenum' ] ]
+      \ },
 	  \ 'tabline': {
-      \   'right': [ [] ]
+      \   'right': [ [ 'datetime' ] ]
+      \ },
+      \ 'component': {
+      \   'datetime': '%{strftime("%m-%d %H:%M:%S")}',
       \ },
       \ 'component_function': {
-      \   'filename': 'lightlint#custom#filename',
+      \   'mode': 'lightline#custom#mode',
+      \   'paste': 'lightline#custom#paste',
+      \   'readonly': 'lightline#custom#readonly',
+      \   'filename': 'lightline#custom#filename',
+      \   'modified': 'lightline#custom#modified',
+      \   'maxlinenum': 'lightline#custom#maxlinenum',
+      \   'charvaluehex': 'lightline#custom#charvaluehex',
+      \   'filetype': 'lightline#custom#filetype',   
+      \   'fileencoding': 'lightline#custom#fileencoding',   
+      \   'fileformat': 'lightline#custom#fileformat',   
+      \   'lineinfo': 'lightline#custom#lineinfo',   
+      \ },
+      \ 'tab_component_function': {
+      \   'filename': 'lightline#custom#tabfilename',
+      \   'modified': 'lightline#custom#tabmodified',
       \ },
       \ }
 " NERDTree配置
@@ -34,6 +55,7 @@ let g:NERDTreeHighlightCursorline=0
 let g:NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '~'
+let g:NERDTreeStatusline='NERDTree'
 
 " Enable filetype plugins
 filetype plugin on
@@ -249,9 +271,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
-" Format the status line
-" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
@@ -273,14 +292,6 @@ map <leader>sp [s
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
-
 " Don't close window, when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
 function! <SID>BufcloseCloseIt()
