@@ -2,7 +2,7 @@
 这个Git维护我的开发环境
 
 ## 目录
-- [debianInit.sh](#debianInit)
+- [debianInit.sh](#debianInit.sh)
 
-## debianInit
+## debianInit.sh
 环境初始化脚本
