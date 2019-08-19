@@ -69,7 +69,7 @@ function! lightline#custom#tabmodified(n) abort
 endfunction
 
 function! lightline#custom#datetimer(timer) abort
-  call lightline#highlight('tabline')
+  set tabline=%!lightline#tabline()
 endfunction
 let datetimer = timer_start(1000, 'lightline#custom#datetimer', {'repeat':-1})
 
