@@ -71,7 +71,7 @@ endfunction
 function! lightline#custom#datetimer(timer) abort
     exec 'redrawtabline'
 endfunction
-let datetimer = timer_start(1000, 'lightline#custom#datetimer', {'repeat':-1})
+let datetimer = timer_start(10000, 'lightline#custom#datetimer', {'repeat':-1})
 
 let &cpo = s:save_cpo
 unlet s:save_cpo

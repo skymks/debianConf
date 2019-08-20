@@ -29,7 +29,7 @@ let g:lightline = {
       \   'right': [ [ 'datetime' ] ]
       \ },
       \ 'component': {
-      \   'datetime': '%{strftime("%m-%d %H:%M:%S")}',
+      \   'datetime': '%{strftime("%m-%d %H:%M")}',
       \ },
       \ 'component_function': {
       \   'mode': 'lightline#custom#mode',
