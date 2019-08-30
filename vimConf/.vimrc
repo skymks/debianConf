@@ -26,10 +26,7 @@ let g:lightline = {
       \              [ 'maxlinenum' ] ]
       \ },
 	  \ 'tabline': {
-      \   'right': [ [ 'datetime' ] ]
-      \ },
-      \ 'component': {
-      \   'datetime': '%{strftime("%m-%d %H:%M")}',
+      \   'right': [ [ ] ]
       \ },
       \ 'component_function': {
       \   'mode': 'lightline#custom#mode',
@@ -229,6 +226,14 @@ map <C-l> <C-W>l
 
 " ctags
 nnoremap <f5> :!ctags -R<CR>
+" 配置taglist
+nnoremap <silent> <f8> :TlistToggle<CR>
+let g:Tlist_Use_Right_Window=1
+let g:Tlist_Auto_Highlight_Tag=1
+" let g:Tlist_Display_Prototype=1
+let g:Tlist_Exit_OnlyWindow=1
+let g:Tlist_Show_One_File=1
+let g:Tlist_Compact_Format=1
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
