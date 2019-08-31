@@ -13,7 +13,9 @@
 
 ### 快捷键
 - `,+n` 打开NerdTree
+- `,+h` 打开TagList
 - `,+tn` 新建Tab页
 - `,+ba` 清空所有Buffer
+- `,+
 - `[range]t {address}` 复制指定的行到指定的行下 
 - `[range]m {address}` 剪切指定的行到指定的行下
