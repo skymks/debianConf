@@ -227,7 +227,7 @@ map <C-l> <C-W>l
 " ctags
 nnoremap <f5> :!ctags -R<CR>
 " 配置taglist
-nnoremap <silent> <f8> :TlistToggle<CR>
+nnoremap <silent> <leader>h :TlistToggle<CR>
 let g:Tlist_Use_Right_Window=1
 let g:Tlist_Auto_Highlight_Tag=1
 " let g:Tlist_Display_Prototype=1
@@ -241,8 +241,8 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-map <leader>l :tabnext<cr>
-map <leader>h :tabprevious<cr>
+map <leader>k :tabnext<cr>
+map <leader>j :tabprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
