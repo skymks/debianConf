@@ -13,9 +13,10 @@
 
 ### 快捷键
 - `,+n` 打开NerdTree
-- `,+h` 打开TagList
+- `,+h` 打开TAGList
 - `,+tn` 新建Tab页
 - `,+ba` 清空所有Buffer
-- `,+
+- `,+j` 向左切换TAB
+- `,+k` 向右切换TAB
 - `[range]t {address}` 复制指定的行到指定的行下 
 - `[range]m {address}` 剪切指定的行到指定的行下
