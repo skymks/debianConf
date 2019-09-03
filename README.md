@@ -20,3 +20,6 @@
 - `,+k` 向右切换TAB
 - `[range]t {address}` 复制指定的行到指定的行下 
 - `[range]m {address}` 剪切指定的行到指定的行下
+
+### 一些命令
+- `:version` 打印VIM的版本信息

@@ -225,7 +225,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " ctags
-nnoremap <f5> :!ctags -R<CR>
+set tags+=/usr/include/tags
+nnoremap <f5> :call system('ctags -R')<CR>
 " 配置taglist
 nnoremap <silent> <leader>h :TlistToggle<CR>
 let g:Tlist_Use_Right_Window=1
