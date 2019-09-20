@@ -12,6 +12,7 @@
 ## Vim配置
 
 ### 快捷键
+- `,+cr :noh` 取消搜索高亮
 - `,+n` 打开NerdTree
 - `,+h` 打开TAGList
 - `,+tn` 新建Tab页
