@@ -21,6 +21,11 @@ VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的�
 > auto enp0s8</br>
 > iface enp0s8 inet dhcp
 
+### 共享文件夹
+在安装目录下找到：VBoxGuestAddition.iso，Virtual虚机虚拟光驱配置上改ISO文件。
+
+虚机内挂载该ISO:`mount /dev/sr0 /media/cdrom`，执行安装脚本:`./VBoxLinuxAdditions.run`。
+
 ## Bash配置
 - debianInit.sh
 - sources.list
