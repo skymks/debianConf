@@ -8,17 +8,17 @@
 ## VirtualBox配置
 ### 网络配置
 宿主机是win10，VirtualBox安装完成后配置虚拟网卡（默认安装Host-Only），菜单入口：管理->主机网络管理器
-> 手动配置IP地址位：192.168.56.1/24
-> DHCP服务器地址：192.168.56.100
-> DHCP最小地址：192.168.56.101
+> 手动配置IP地址位：192.168.56.1/24</br>
+> DHCP服务器地址：192.168.56.100</br>
+> DHCP最小地址：192.168.56.101</br>
 > DHCP最大地址：192.168.56.101
 
-VB虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的网络配置如下
-> vim /etc/network/interfaces
-> # 网卡名虚机内查询
-> auto enp0s3
-> iface enp0s3 inet dhcp
-> auto enp0s8
+VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的网络配置如下
+> vim /etc/network/interfaces</br>
+> 网卡名虚机内查询</br>
+> auto enp0s3</br>
+> iface enp0s3 inet dhcp</br>
+> auto enp0s8</br>
 > iface enp0s8 inet dhcp
 
 ## Bash配置
