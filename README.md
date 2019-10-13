@@ -7,15 +7,14 @@
 
 ## VirtualBox配置
 ### 网络配置
-宿主机是win10，VirtualBox安装完成后配置虚拟网卡（默认安装Host-Only），菜单入口：管理->主机网络管理器
+宿主机是win10，VirtualBox安装完成后配置虚拟网卡，菜单入口：管理->主机网络管理器
 > 手动配置IP地址位：192.168.56.1/24</br>
 > DHCP服务器地址：192.168.56.100</br>
 > DHCP最小地址：192.168.56.101</br>
 > DHCP最大地址：192.168.56.101
 
-VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的网络配置如下
-> vim /etc/network/interfaces</br>
-> 网卡名虚机内查询</br>
+VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的网络配置如下，网卡名虚机内查询获得，编辑网络配置文件
+`vim /etc/network/interfaces`：
 > auto enp0s3</br>
 > iface enp0s3 inet dhcp</br>
 > auto enp0s8</br>
@@ -26,7 +25,7 @@ VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的�
 
 然后，关毕虚机并配置虚机的共享文件夹，*共享文件夹路径*选择windows盘或文件夹，*共享文件夹名称*填写`windows`，勾上自动挂载功能，默认挂载到虚机内目录`/media/sf_windows`，也可以自定义挂载：`mount -t vboxsf windows /home/xxx`。
 
-在虚拟中软链到Home：ln -sf -T /media/sf_windows ~/windows。
+在虚拟中软链到Home：`ln -sf -T /media/sf_windows ~/windows`。
 
 ## Bash配置
 - debianInit.sh
