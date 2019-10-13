@@ -22,9 +22,11 @@ VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的�
 > iface enp0s8 inet dhcp
 
 ### 共享文件夹
-在安装目录下找到：VBoxGuestAddition.iso，Virtual虚机虚拟光驱配置上该ISO文件。
-虚机内挂载该ISO:`mount /dev/sr0 /media/cdrom`，执行安装脚本:`./VBoxLinuxAdditions.run`。
+首先，安装vbox扩展功能，在安装目录下找到：VBoxGuestAddition.iso，Virtual虚机虚拟光驱挂载上该ISO文件。虚机内挂载该ISO:`mount /dev/sr0 /media/cdrom`，执行安装脚本:`./VBoxLinuxAdditions.run`。
 
+然后，配置虚机的共享文件夹，*共享文件夹路径*选择windows盘或文件夹，*共享文件夹名称*填写`windows`，选择上自动挂载，默认挂载到虚机`/media/sf_windows`，也可以自定义挂载：`mount -t vboxsf windows /home/xxx`。
+
+在虚拟中软链到Home：ln -sf -T /media/sf_windows ~/windows。
 
 ## Bash配置
 - debianInit.sh
