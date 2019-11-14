@@ -57,3 +57,5 @@ VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的�
 
 ### 一些命令
 - `:version` 打印VIM的版本信息
+- `:pwd` 查询当前工作目录
+- `:cd {path}` 设置当前工作目录
