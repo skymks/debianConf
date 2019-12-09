@@ -72,10 +72,14 @@ endfunction
 function! lightline#custom#tabfilename(n) abort
   let buflist = tabpagebuflist(a:n)
   let winnr = tabpagewinnr(a:n)
+  let winid = win_getid(winnr,a:n)
+  " echom winid
+  let wininfo = getwininfo(winid)[0]
+  " echom wininfo
   let _ = expand('#'.buflist[winnr - 1].':t')
   return _ =~# 'NERD_tree_.*' ? 'NERDTree' :
                \ _ ==# '__Tag_List__' ? 'TAGList' :
-               \ &filetype ==# 'qf' ? 'Quickfix' :
+               \ wininfo.quickfix ==# 1 ? 'Quickfix' :
                \ _ !=# '' ? _ : '[No Name]'
 endfunction
 
