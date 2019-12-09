@@ -4,6 +4,7 @@ set cpo&vim
 function! lightline#custom#mode() abort
    return &filetype ==# 'nerdtree' ? '' :
                \ &filetype ==# 'taglist' ? '' :
+               \ &filetype ==# 'qf' ? '' :
                \ lightline#mode() 
 endfunction
 
@@ -28,6 +29,7 @@ endfunction
 function! lightline#custom#filename() abort
    return &filetype ==# 'nerdtree' ? 'NERDTree' :
                \ &filetype ==# 'taglist' ? 'TAGList' :
+               \ &filetype ==# 'qf' ? 'Quickfix' :
                \ expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
 endfunction
 
@@ -73,6 +75,7 @@ function! lightline#custom#tabfilename(n) abort
   let _ = expand('#'.buflist[winnr - 1].':t')
   return _ =~# 'NERD_tree_.*' ? 'NERDTree' :
                \ _ ==# '__Tag_List__' ? 'TAGList' :
+               \ &filetype ==# 'qf' ? 'Quickfix' :
                \ _ !=# '' ? _ : '[No Name]'
 endfunction
 
