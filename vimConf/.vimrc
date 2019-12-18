@@ -229,7 +229,6 @@ map <C-l> <C-W>l
 
 " path
 set path+=./**
-
 " ctags
 set tags+=/usr/include/tags
 nnoremap <f5> :call system('ctags -R')<CR>
