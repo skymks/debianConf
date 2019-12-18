@@ -8,6 +8,9 @@ set fileencodings=utf-8
 " Sets how many lines of history VIM has to remember
 set history=500
 
+" packadd
+packadd! termdebug
+
 " 关闭编辑模式提示
 set noshowmode
 
