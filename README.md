@@ -1,5 +1,5 @@
 # debianConf
-这个Git维护我的开发环境
+这个Git维护我的开发环境，Clone到根目录，之后执行debianInit.sh，选择执行appConf的配置。
 
 - [VirtualBox配置](#VirtualBox配置)
 - [Bash配置](#Bash配置)
