@@ -29,7 +29,6 @@ VirtualBox虚机装debian，虚机配置双网卡：NAT和Host-Only，debian的�
 
 ## Bash配置
 - debianInit.sh
-- sources.list
 - .bashrc
 
 ## Vim配置
